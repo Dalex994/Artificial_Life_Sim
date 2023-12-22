@@ -1,0 +1,15 @@
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\bin\Debug\net7.0\Artificial_Life.exe
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\bin\Debug\net7.0\Artificial_Life.deps.json
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\bin\Debug\net7.0\Artificial_Life.runtimeconfig.json
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\bin\Debug\net7.0\Artificial_Life.dll
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\bin\Debug\net7.0\Artificial_Life.pdb
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\Artificial_Life.csproj.AssemblyReference.cache
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\Artificial_Life.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\Artificial_Life.AssemblyInfoInputs.cache
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\Artificial_Life.AssemblyInfo.cs
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\Artificial_Life.csproj.CoreCompileInputs.cache
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\Artificial_Life.dll
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\refint\Artificial_Life.dll
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\Artificial_Life.pdb
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\Artificial_Life.genruntimeconfig.cache
+D:\Programmation\HTML\Artificial life\Csharp_equivalent\Artificial_Life\obj\Debug\net7.0\ref\Artificial_Life.dll

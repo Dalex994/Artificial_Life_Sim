@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial life</title>
+    <style>
+        
+        * { margin: 0; padding: 0; }
+        body, html { height:100%; }
+        #canvas { position:absolute; height:100%; width:100%; }
+    </style>
+</head>
+<body>
+    <canvas id="life" width="500" height="500"></canvas>
+    <script>
+        // define the canvas to fill the page
+        var canvas = document.getElementById("life");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    
+        m = document.getElementById("life").getContext('2d')
+        // set coordinnates
+        draw = (x, y, c, s)=>{
+            m.fillStyle=c
+            m.fillRect(x, y, s, s)
+        }
+        // define particles
+        particles= []
+        particle = (x, y, c)=>{
+            return{"x":x, "y":y, "vx":0, "vy":0, "color":c}
+        }
+        // randomize their position
+        random=()=>{
+            return Math.random()*400+50
+        }
+        // function to permit the creation of the particles
+        create=(number, color)=>{
+            group = []
+            for(let i=0; i < number; i++){
+                group.push(particle(random(), random(), color))
+                particles.push(group[i])
+            }
+            return group
+        }
+        // function that modelize the interaction forces between them using 2nd and 3rd Newton's laws (mass of 1) 
+        rule=(particles1, particles2, g)=>{
+            for(let i=0; i < particles1.length; i++){
+                fx=0
+                fy=0
+    
+                for(let j=0; j < particles2.length; j++){
+                a = particles1[i]
+                b = particles2[j]
+                dx = a.x-b.x
+                dy = a.y-b.y
+                d = Math.sqrt(dx*dx + dy*dy)
+                if(d>0 && d < 80){
+                    F = g * 1/d
+                    fx += (F * dx)
+                    fy += (F * dy)
+                }
+            }
+            a.vx = (a.vx + fx)*0.5
+            a.vy = (a.vy + fy)*0.5
+            a.x += a.vx
+            a.y += a.vy
+            if(a.x <= 0 || a.x >= 750){ a.vx *= -1}
+            if(a.y <= 0 || a.y >= 750){ a.vy *= -1}
+            }
+        }
+    
+        yellow = create(300, "yellow")
+        red = create(300, "red")
+        green = create(300, "green")
+        white = create(300, "white")
+
+
+        // creating the function that instances the interactions between those particles
+        update=()=>{
+            rule(red, red, -0.1)
+            rule(yellow, red, 0.01)
+            rule(green, green, -0.32)
+            rule(green, red, 0.17)
+            rule(green, yellow, 0.14)
+            rule(yellow, yellow, -0.15)
+            rule(yellow, green, -0.2)
+            rule(red, green, -0.34)
+            rule(white, white, -0.1)
+            rule(white, yellow, -0.25)
+            rule(white, red, 0.3)
+            rule(white, green, 0.18)
+            rule(yellow, white, 0.11)
+            rule(red, white, -0.35)
+            rule(green, white, -0.18)
+
+            // shows particles on screen
+            m.clearRect(0, 0, 10000, 10000)
+            draw(0, 0, "black", 10000)
+            for(i=0; i<particles.length; i++){
+                draw(particles[i].x, particles[i].y, particles[i].color, 5)
+            }
+            requestAnimationFrame(update)
+        }
+    
+        update();
+    
+    </script>
+</body>
+</html>
